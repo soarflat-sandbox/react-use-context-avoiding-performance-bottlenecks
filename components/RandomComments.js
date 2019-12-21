@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import { GlobalSpinnerContext } from "../context/GlobalSpinnerContext";
+import { GlobalSpinnerActionsContext } from "../context/GlobalSpinnerContext";
 
 const RandomComments = props => {
   const [comments, setComments] = useState([]);
-  const { setGlobalSpinner } = useContext(GlobalSpinnerContext);
+  const setGlobalSpinner = useContext(GlobalSpinnerActionsContext);
 
   useEffect(() => {
     (async () => {
