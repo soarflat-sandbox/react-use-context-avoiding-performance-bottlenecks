@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./globalSpinner.css";
-import { GlobalSpinnerContext } from "../../context/GlobalSpinnerContext";
+import { useGlobalSpinnerContext } from "../../context/GlobalSpinnerContext";
 
 const GlobalSpinner = props => {
-  const isGlobalSpinnerOn = useContext(GlobalSpinnerContext);
+  const isGlobalSpinnerOn = useGlobalSpinnerContext();
 
   return isGlobalSpinnerOn ? (
     <div className="global-spinner-overlay">
